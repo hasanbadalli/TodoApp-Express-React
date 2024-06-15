@@ -4,4 +4,4 @@ let taskDB = [
     {id: 2, text: "Learn Hasan.js"}
 ]
 
-export default taskDB
+module.exports = {taskDB};
