@@ -9,8 +9,5 @@ app.use(cors());
 
 app.use("/taskapi", taskRouter)
 
-app.get("/taskapi", (req, res) => {
-  res.json(taskDataBase.taskDB);
-});
 
 app.listen(3000);

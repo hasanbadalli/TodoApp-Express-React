@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import TaskContainer from "./components/TaskContainer";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -58,20 +59,7 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="tasks-container">
-            <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-              {tasks.map((task) => (
-                <div
-                  className=" flex flex-row justify-between items-center text-center border-b"
-                  style={{
-                    marginBottom: "20px",
-                  }}
-                >
-                  <li key={task.id}>{task.text}</li>
-                </div>
-              ))}
-            </ul>
-          </div>
+          <TaskContainer tasks={tasks} setTasks={setTasks}/>
         </div>
       </div>
     </div>
